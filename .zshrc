@@ -96,7 +96,6 @@ export NIX_CFLAGS_COMPILE="-idirafter /usr/include" #haskell math.h problem solv
 export NIX_CFLAGS_LINK="-L/usr/lib"
 
 #homebrew
-export HOMEBREW_GITHUB_API_TOKEN=abff468a2f61d1558817af37ed8e6c33102861fd
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
