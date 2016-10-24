@@ -71,6 +71,12 @@ export MANPATH="/usr/local/man:$MANPATH:/opt/local/share/man:/Library/TeX/Distri
 # export ARCHFLAGS="-arch x86_64"
 
 
+# ZSH
+HISTFILE=~/.histfile
+HISTSIZE=100000
+SAVEHIST=100000
+
+
 # Development
 export DEVELOPMENT="YES"
 
@@ -83,7 +89,6 @@ export SSH_KEY_PATH="~/.ssh/id_mac_rsa"
 #golang
 GOVERSION=$(brew list go | head -n 1 | cut -d '/' -f 6)
 export GOROOT=$(brew --prefix)/Cellar/go/$GOVERSION/libexec
-#export GOROOT="/usr/local/Cellar/go/1.4.2"
 export GOPATH="$HOME/Development/Go"
 export GOBIN="$GOPATH/bin"
 export PATH="$PATH:$GOBIN"
@@ -96,6 +101,13 @@ export NIX_CFLAGS_COMPILE="-idirafter /usr/include" #haskell math.h problem solv
 export NIX_CFLAGS_LINK="-L/usr/lib"
 
 #homebrew
+fpath=(/usr/local/share/zsh-completions $fpath)
+autoload -U compinit
+compinit
+
+#if [ -f $(brew --prefix)/etc/bash_completion ]; then
+#  . $(brew --prefix)/etc/bash_completion
+#fi
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
